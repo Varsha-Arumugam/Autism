@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/table_assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="/static/table_assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Autism Detector - Compression</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- CSS Files -->
+    <link href="/static/table_assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/static/table_assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="/static/table_assets/css/demo.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar" data-image="/static/table_assets/img/sidebar-5.jpg" data-color="blue">
+            <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+          <div class="sidebar-wrapper">
+              <div class="logo">
+                  <a href="http://www.creative-tim.com" class="simple-text">
+                      AUTISM DETECTOR
+                  </a>
+              </div>
+              <ul class="nav">
+                  <li>
+                      <a class="nav-link" href="/">
+                          <i class="nc-icon nc-chart-pie-35"></i>
+                          <p>Home</p>
+                      </a>
+                  </li>
+
+                  <li>
+                      <a class="nav-link" href="/logout">
+                          <i class="nc-icon nc-bell-55"></i>
+                          <p>Log out</p>
+                      </a>
+                  </li>
+
+              </ul>
+          </div>
+      </div>
+
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg " color-on-scroll="500">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#pablo"> </a>
+                    <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">
+                                    <span class="no-icon"> Welcome {{username}}</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">
+                                    <span class="no-icon">Log out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+
+
+
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Deep learning aided Autism Detector</h4>
+                                </div>
+                                <div class="card-body">
+                                    <form action = "http://localhost:5000/uploader" method = "POST" enctype="multipart/form-data">
+
+                                        <div class="row">
+
+                                            <div class="col-md-6 pr-1">
+                                                <div class="form-group">
+                                                    <label>Upload the file</label> <br>
+                                                      <input type = "file" name = "file" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button id="compresssubmit" type="submit" class="btn btn-info btn-fill pull-left">Upload</button>
+                                        <div id ="loader" style="display:None;" class="spinner-grow text-success"  role="status"></div>
+                                        <div id = "label" style="display:None;"><label>  Please wait while we process the image for you ! </label> </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card card-user">
+                                <div class="card-image">
+
+                                </div>
+                                <div class="card-body">
+                                    <div class="author">
+                                        <a href="#">
+                                            <img class="avatar border-gray" src="/static/img/at1.png" alt="...">
+                                            <h5 class="title">Autism</h5>
+                                        </a>
+                                        <p class="description">
+                                          Autism spectrum disorder (ASD) is a developmental disorder that affects communication and behavior.
+                                          Although autism can be diagnosed at any age, it is said to be a “developmental disorder” because symptoms 
+                                          generally appear in the first two years of life.
+                                        </p>
+                                    </div>
+                                    <p class="description text-center">
+
+                                    </p>
+                                </div>
+                                <hr>
+                                <div class="button-container mr-auto ml-auto">
+                                    <button href="#" class="btn btn-simple btn-link btn-icon">
+                                        <i class="fa fa-facebook-square"></i>
+                                    </button>
+                                    <button href="#" class="btn btn-simple btn-link btn-icon">
+                                        <i class="fa fa-twitter"></i>
+                                    </button>
+                                    <button href="#" class="btn btn-simple btn-link btn-icon">
+                                        <i class="fa fa-google-plus-square"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav>
+                        <p class="copyright text-center">
+                            ©
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>
+                            Designed by <a href="https://www.tce.edu/dept/cse/home/">Team FORCASTERS</a>
+                             <br>  Hosted and Maintained with &#10084;
+                        </p>
+                    </nav>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!--   -->
+    <div class="fixed-plugin">
+  <div class="dropdown show-dropdown">
+      <a href="#" data-toggle="dropdown">
+          <i class="fa fa-cog fa-2x"> </i>
+      </a>
+
+      <ul class="dropdown-menu">
+    <li class="header-title"> Sidebar Style</li>
+          <li class="adjustments-line">
+              <a href="javascript:void(0)" class="switch-trigger">
+                  <p>Background Image</p>
+                  <label class="switch">
+                      <input type="checkbox" data-toggle="switch" checked="" data-on-color="primary" data-off-color="primary"><span class="toggle"></span>
+                  </label>
+              </a>
+          </li>
+          <li class="adjustments-line">
+              <a href="javascript:void(0)" class="switch-trigger background-color">
+                  <p>Filters</p>
+                  <div class="pull-right">
+                      <span class="badge filter badge-black" data-color="black"></span>
+                      <span class="badge filter badge-azure" data-color="azure"></span>
+                      <span class="badge filter badge-green" data-color="green"></span>
+                      <span class="badge filter badge-orange" data-color="orange"></span>
+                      <span class="badge filter badge-red" data-color="red"></span>
+                      <span class="badge filter badge-purple active" data-color="purple"></span>
+                  </div>
+              </a>
+          </li>
+          <li class="header-title">Sidebar Images</li>
+
+          <li class="active">
+              <a class="img-holder switch-trigger" href="javascript:void(0)">
+                  <img src="/static/table_assets/img/sidebar-1.jpg" alt="" />
+              </a>
+          </li>
+          <li>
+              <a class="img-holder switch-trigger" href="javascript:void(0)">
+                  <img src="/static/table_assets/img/sidebar-3.jpg" alt="" />
+              </a>
+          </li>
+          <li>
+              <a class="img-holder switch-trigger" href="javascript:void(0)">
+                  <img src="/static/table_assets/img/sidebar-4.jpg" alt="" />
+              </a>
+          </li>
+          <li>
+              <a class="img-holder switch-trigger" href="javascript:void(0)">
+                  <img src="/static/table_assets/img/sidebar-5.jpg" alt="" />
+              </a>
+          </li>
+      </ul>
+  </div>
+</div>
+
+</body>
+
+<!--   Core JS Files   -->
+<script src="/static/table_assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="/static/table_assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="/static/table_assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<script src="/static/table_assets/js/plugins/bootstrap-switch.js"></script>
+<script src="/static/table_assets/js/plugins/chartist.min.js"></script>
+<script src="/static/table_assets/js/plugins/bootstrap-notify.js"></script>
+<script src="/static/table_assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
+<script src="/static/table_assets/js/demo.js"></script>
+
+<script>
+    $("#compresssubmit").click(function() {
+      $("#loader").show();
+      $("#label").show()
+    });
+</script>
+
+
+</html>
